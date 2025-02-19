@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_to_id_journal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3ebb1269-b0f6-42d8-bd4f-a6b920fb9400">
+	<property name="ireport.zoom" value="1.6500000000000041"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="j_acc1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="j_acc2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     journal.`j_date_of_entry` AS journal_j_date_of_entry,
+     journal.`j_department` AS journal_j_department,
+     journal.`j_acc_no` AS journal_j_acc_no,
+     journal.`j_category` AS journal_j_category,
+     journal.`j_language` AS journal_j_language,
+     journal.`j_title` AS journal_j_title,
+     journal.`j_subtitle` AS journal_j_subtitle,
+     journal.`j_subject` AS journal_j_subject,
+     journal.`j_pages` AS journal_j_pages,
+     journal.`j_copies` AS journal_j_copies
+FROM
+     `journal` journal
+
+where
+     j_acc_no >=$P{j_acc1} && j_acc_no<=$P{j_acc2};]]>
+	</queryString>
+	<field name="journal_j_date_of_entry" class="java.lang.String"/>
+	<field name="journal_j_department" class="java.lang.String"/>
+	<field name="journal_j_acc_no" class="java.lang.String"/>
+	<field name="journal_j_category" class="java.lang.String"/>
+	<field name="journal_j_language" class="java.lang.String"/>
+	<field name="journal_j_title" class="java.lang.String"/>
+	<field name="journal_j_subtitle" class="java.lang.String"/>
+	<field name="journal_j_subject" class="java.lang.String"/>
+	<field name="journal_j_pages" class="java.lang.String"/>
+	<field name="journal_j_copies" class="java.lang.String"/>
+	<group name="journal_j_date_of_entry">
+		<groupExpression><![CDATA[$F{journal_j_date_of_entry}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="0" width="1" height="35" uuid="0561416f-1aad-4413-b1eb-4de729950248"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="0" width="1" height="32" uuid="64d8617a-9600-41db-9a34-dd52c0eddd18"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="0" width="1" height="20" uuid="12f01754-5a13-41f7-b6ef-241d6381fbb9"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement x="148" y="344" width="257" height="1" uuid="bb071584-0c6c-420f-834d-b3241575197c"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="42" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

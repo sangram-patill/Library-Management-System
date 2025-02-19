@@ -1,0 +1,309 @@
+/* 
+    Document   : style
+    Created on : 27 Feb, 2023, 3:40:37 PM
+    Author     : sangr
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Mega', sans-serif;
+}
+html, body{
+    height: 100%;
+    background: whitesmoke;
+}
+nav{
+    width: 20vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #678983;
+    box-shadow: 5px rgba(0,0,0,0.5);
+    overflow-y: scroll; 
+}
+nav .heading{
+    margin-left: 5%;
+    margin-top: 6%; 
+    font-size: 33 px;
+}
+nav .heading:hover{
+   
+    margin-top: 5%; 
+    color: #f1f1f1;
+    
+}
+nav ul{
+    position: relative;
+    list-style-type: none;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    font-size:  15px;    
+    color: #000;
+    padding: 10px 20px;
+    height: 50px;
+    transition: .5s ease;    
+}
+nav ul li a span{
+   position: absolute;
+   right: 25px;
+   font-size: 1.5em;
+   margin-top: 23px;
+   transform: translateY(-50%);
+}
+nav ul li a span.rotate{
+    transform: translateY(-50%)rotate(-180deg);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background: #678983; 
+    color: white;
+    text-decoration: none;
+}
+
+nav ul ul{
+    position: relative;
+    width: 100%;
+    top: 0px;
+    display: none;
+    background-color: #678983;  
+    z-index: 1; 
+    text-decoration: none;
+}
+
+nav ul li ul {
+    padding-left: 5px;
+}
+
+nav ul .stock-show.show{
+    display: block;
+}
+nav ul .master-show.show2{
+    display: block;
+}
+nav ul .modify-show.show3{
+    display: block;
+}
+nav ul .trans-show.show4{
+    display: block;
+}
+nav ul .curr-show.show5{
+    display: block;
+}
+nav ul .user-show.show6{
+    display: block;
+}
+nav ul .stock-modify-show.show7{
+    display: block;
+}
+nav ul .general-modify-show.show8{
+    display: block;
+}
+
+
+/*Card css*/
+
+.logo{
+    height: 70px;
+    width: 80px;
+}
+.btn{
+    background: #678983;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    color: #678983;
+    background: white;
+    padding: 3px 8px;
+    border: 2px solid #678983;
+}
+
+
+
+.container{ 
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;
+    position: absolute;
+}
+
+.container .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.container .header .nav .search input[type=text]{
+    border: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+}
+.container .header .nav .search button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container .header .nav .user{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .header .nav .user img{
+    width: 40px;
+    height: 40px;
+}
+
+.container .header .nav .user .img-case{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.container .header .nav .user .img-case img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background: #f1f1f1;
+    margin-left: -57px;     /*change margin here*/
+}
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .content .cards .card{
+    width: 1200px;
+    height: 590px;     /*Change Div height here*/
+    background: white;
+    margin: 20px 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+@media screen and (max-width: 1050px){
+    nav li a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    nav li a{
+        display: none;
+    }
+    nav{
+        align-items: center;
+    }
+    nav li img{
+        width: 40px;
+        height: 40px;
+    }
+    nav li:hover{
+        background: #678983;
+        padding: 8px 38px;
+        border: 2px solid white;
+    }
+    .container .header .nav .logo{        
+            height: 50px;
+            width: 60px;
+    }
+}
+@media screen and (max-width: 536px){
+    .brand-name .logo{
+        height: 70px;
+        width: 80px;
+    }
+    h1{
+        font-size: 16px;
+    }
+    .container .content .cards{
+        justify-content: center;
+        position: fixed;
+    }
+    nav li img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .container .header .nav .logo{        
+            height: 40px;
+            width: 30px;
+    }
+}
+
+/*Custom Css*/
+
+.container .content .cards .labelclass{
+    margin-left:14%;
+}
+
+.container .content .cards .textboxclass{
+   width: 175px;
+}
+
+.container .content .cards .addbook{
+    color: black;
+    background: #9DC08B;
+    height: 30px;
+    width: 110px;
+    margin-left: 125px;
+}
+
+.container .content .cards .x{
+    margin-left: 50px;
+}
+
+.container .content .cards .y{
+    margin-left: 50px;
+    width: 250px;
+    height: 25px;
+}
+
+
+

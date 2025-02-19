@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="student" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2791b109-367c-4004-81ad-6da7bae23de5">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     student.`registration_no` AS student_registration_no,
+     student.`stud_department` AS student_stud_department,
+     student.`stud_year` AS student_stud_year,
+     student.`stud_name` AS student_stud_name,
+     student.`stud_mobno` AS student_stud_mobno,
+     student.`stud_dob` AS student_stud_dob,
+     student.`stud_email` AS student_stud_email,
+     student.`stud_address` AS student_stud_address,
+     student.`stud_city` AS student_stud_city,
+     student.`stud_pincode` AS student_stud_pincode,
+     student.`stud_state` AS student_stud_state,
+     student.`stud_district` AS student_stud_district,
+     student.`stud_taluka` AS student_stud_taluka,
+     student.`stud_gender` AS student_stud_gender,
+     student.`stud_photo` AS student_stud_photo,
+     student.`stud_sign` AS student_stud_sign,
+     student.`password` AS student_password,
+     student.`role` AS student_role
+FROM
+     `student` student]]>
+	</queryString>
+	<field name="student_registration_no" class="java.lang.Long"/>
+	<field name="student_stud_department" class="java.lang.String"/>
+	<field name="student_stud_year" class="java.lang.String"/>
+	<field name="student_stud_name" class="java.lang.String"/>
+	<field name="student_stud_mobno" class="java.lang.String"/>
+	<field name="student_stud_dob" class="java.lang.String"/>
+	<field name="student_stud_email" class="java.lang.String"/>
+	<field name="student_stud_address" class="java.lang.String"/>
+	<field name="student_stud_city" class="java.lang.String"/>
+	<field name="student_stud_pincode" class="java.lang.String"/>
+	<field name="student_stud_state" class="java.lang.String"/>
+	<field name="student_stud_district" class="java.lang.String"/>
+	<field name="student_stud_taluka" class="java.lang.String"/>
+	<field name="student_stud_gender" class="java.lang.String"/>
+	<field name="student_stud_photo" class="java.lang.Object"/>
+	<field name="student_stud_sign" class="java.lang.Object"/>
+	<field name="student_password" class="java.lang.String"/>
+	<field name="student_role" class="java.lang.String"/>
+	<group name="student_registration_no">
+		<groupExpression><![CDATA[$F{student_registration_no}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="publisher" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e058d309-3b88-4d51-88a0-3fe802e98784">
+	<property name="ireport.zoom" value="1.7715610000000077"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#C3CFD9">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F8FCFF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="edde8b9a-38a2-4650-817d-41048756e915"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     publisher.`publisher_id` AS publisher_publisher_id,
+     publisher.`publisher_name` AS publisher_publisher_name,
+     publisher.`publisher_address` AS publisher_publisher_address,
+     publisher.`publisher_state` AS publisher_publisher_state,
+     publisher.`publisher_district` AS publisher_publisher_district,
+     publisher.`publisher_taluka` AS publisher_publisher_taluka
+FROM
+     `publisher` publisher]]>
+	</queryString>
+	<field name="publisher_publisher_id" class="java.lang.Long"/>
+	<field name="publisher_publisher_name" class="java.lang.String"/>
+	<field name="publisher_publisher_address" class="java.lang.String"/>
+	<field name="publisher_publisher_state" class="java.lang.String"/>
+	<field name="publisher_publisher_district" class="java.lang.String"/>
+	<field name="publisher_publisher_taluka" class="java.lang.String"/>
+	<group name="publisher_publisher_id">
+		<groupExpression><![CDATA[$F{publisher_publisher_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="e74e173a-7d80-48e7-92de-33bf4dedc8af"/>
+				<imageExpression><![CDATA["C:\\Users\\Aditya\\OneDrive\\Desktop\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="214" y="0" width="125" height="35" forecolor="#0066FF" uuid="288d7430-a36e-4982-a2d3-85944df1c0af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Publisher List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="c13652f9-7aa9-4ccc-8979-61ae8854ef79"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="eec6e6a2-cd1f-4a7d-9eb0-2467b487f49e"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="28" uuid="de44fefd-623a-4ce4-aa6b-c8507e990661"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Publisher ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="92" height="28" uuid="9ff364b0-ff97-40ed-98db-718ebbfd984a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="92" height="28" uuid="7a508c2e-a3f6-4625-b58a-1e9121e4f838"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="92" height="28" uuid="623aab8b-3027-4c39-9bbf-a1e286b7ba8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="28" uuid="6705f7a4-12b2-4abc-aa98-2e0066b4d360"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="95" height="28" uuid="38ed5526-966b-4a9c-9232-f0445e62508a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Taluka]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="27" width="555" height="1" uuid="7245e3f5-5d0a-4675-ac21-5211fa4d73bf"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="1" height="28" uuid="3b6d21ea-a9e1-42ec-8b94-3d3adbaa86a9"/>
+			</line>
+			<line>
+				<reportElement x="92" y="0" width="1" height="27" uuid="b8286418-e048-43a3-bfd0-53efe501b90f"/>
+			</line>
+			<line>
+				<reportElement x="184" y="0" width="1" height="27" uuid="4457cc64-2358-478a-af6b-267fab877312"/>
+			</line>
+			<line>
+				<reportElement x="276" y="0" width="1" height="27" uuid="ca136ba9-330a-41bd-aeb0-aecbeec6eb29"/>
+			</line>
+			<line>
+				<reportElement x="368" y="0" width="1" height="27" uuid="23f74d13-7a11-48c5-9735-e137b88bb756"/>
+			</line>
+			<line>
+				<reportElement x="460" y="0" width="1" height="27" uuid="e7dcdb44-8753-40a0-b449-58ef691458b1"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="27" uuid="6112091b-2632-4e6c-bc29-62977f625c03"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20" uuid="3cecf180-68b5-41ff-a3d4-6ca0ff11a2c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="92" height="20" uuid="f75e60e5-2270-495b-a4e5-faed5644e58d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="92" height="20" uuid="5f08351e-5c02-44e3-8b4f-5b2718d9a14b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="92" height="20" uuid="ac336c81-d4c2-4f9f-8b77-b1b1d762ceda"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="20" uuid="9b8a703e-6d6e-400d-81c8-7860a8d97ded"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_district}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="95" height="20" uuid="5507faea-fec0-4d2c-b0d7-9314c93259ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{publisher_publisher_taluka}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="b65e5ea2-ce01-488f-be2e-c04874972295"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="21" uuid="8998217e-db31-40f7-9fd0-3ce43d698790"/>
+			</line>
+			<line>
+				<reportElement x="92" y="0" width="1" height="20" uuid="c4f3f0eb-b2b5-4e1d-922a-865912b1dd4e"/>
+			</line>
+			<line>
+				<reportElement x="184" y="0" width="1" height="21" uuid="8a270d28-c110-44ba-98a0-7dababd791a6"/>
+			</line>
+			<line>
+				<reportElement x="276" y="0" width="1" height="20" uuid="27118fa1-5259-4f76-9cae-a4373c8c06ae"/>
+			</line>
+			<line>
+				<reportElement x="368" y="0" width="1" height="21" uuid="3d5c93c9-d7ea-4c2b-b98a-f64bf41af091"/>
+			</line>
+			<line>
+				<reportElement x="460" y="0" width="1" height="20" uuid="d6d8d64f-9261-4932-8e09-92d307e55d95"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="20" uuid="d84177aa-6e88-47f6-ac97-6c42d0e59d84"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

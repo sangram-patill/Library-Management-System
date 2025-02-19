@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_to_id_magazine" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abf7dd42-6de6-4c6e-afca-9ca9383f89a7">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="m_acc1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="m_acc2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     magzine.`m_date_of_entry` AS magzine_m_date_of_entry,
+     magzine.`m_department` AS magzine_m_department,
+     magzine.`m_acc_no` AS magzine_m_acc_no,
+     magzine.`m_category` AS magzine_m_category,
+     magzine.`m_language` AS magzine_m_language,
+     magzine.`m_title` AS magzine_m_title,
+     magzine.`m_subtitle` AS magzine_m_subtitle,
+     magzine.`m_subject` AS magzine_m_subject,
+     magzine.`m_pages` AS magzine_m_pages,
+     magzine.`m_copies` AS magzine_m_copies
+FROM
+     `magzine` magzine
+
+where
+     m_acc_no >=$P{m_acc1} && m_acc_no<=$P{m_acc2};]]>
+	</queryString>
+	<field name="magzine_m_date_of_entry" class="java.lang.String"/>
+	<field name="magzine_m_department" class="java.lang.String"/>
+	<field name="magzine_m_acc_no" class="java.lang.String"/>
+	<field name="magzine_m_category" class="java.lang.String"/>
+	<field name="magzine_m_language" class="java.lang.String"/>
+	<field name="magzine_m_title" class="java.lang.String"/>
+	<field name="magzine_m_subtitle" class="java.lang.String"/>
+	<field name="magzine_m_subject" class="java.lang.String"/>
+	<field name="magzine_m_pages" class="java.lang.String"/>
+	<field name="magzine_m_copies" class="java.lang.String"/>
+	<group name="magzine_m_date_of_entry">
+		<groupExpression><![CDATA[$F{magzine_m_date_of_entry}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="7a712eeb-8b01-4a75-8709-684983f9ca0f"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="0" width="170" height="37" forecolor="#9999FF" uuid="43d9672e-d437-4864-8fdc-22c5df514a3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Magazine List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="1" height="37" uuid="0012df80-2a3d-4241-b6c5-9441c51646a0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="c8d88799-4de5-4edc-8e25-f541ab28302b"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="38" uuid="f8c9f94b-1ee7-411a-8caa-71dc2de62f1c"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="55" y="0" width="54" height="25" uuid="fbbdc469-530b-4dc1-876e-e85977132957"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="54" height="25" uuid="85b2dc3c-e138-44d7-aa7f-1027fbb58c69"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Subtitle]]></text>
+			</staticText>
+			<line>
+				<reportElement x="109" y="0" width="1" height="26" uuid="0ffed24d-169f-41e0-aadb-2b3e490b9781"/>
+			</line>
+			<staticText>
+				<reportElement x="494" y="0" width="60" height="25" uuid="b0b1bf18-f7c2-4d7c-88d3-5d464d169f7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Copies]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="0" width="55" height="25" uuid="4a765a50-f0cc-45c9-bd17-fe6012fa0c16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Pages]]></text>
+			</staticText>
+			<line>
+				<reportElement x="439" y="0" width="1" height="26" uuid="8784279b-ee66-44d9-a698-184512d082e9"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="26" uuid="362812c0-d0ad-47a6-bb80-aa800d8cceba"/>
+			</line>
+			<staticText>
+				<reportElement x="165" y="0" width="54" height="25" uuid="be58890a-8bd9-4069-a712-63558d2ef358"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<line>
+				<reportElement x="494" y="0" width="1" height="26" uuid="813ee508-3a5d-4681-961c-f11a1d56b76d"/>
+			</line>
+			<line>
+				<reportElement x="384" y="0" width="1" height="26" uuid="9ed22893-3ab8-43a5-bb84-dc4dfb5ec275"/>
+			</line>
+			<staticText>
+				<reportElement x="384" y="0" width="55" height="25" uuid="369646ba-1eee-40ca-8921-0dae81f5b633"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<line>
+				<reportElement x="54" y="0" width="1" height="26" uuid="52bc7ed5-64e7-4893-b865-88a2ee2afd5b"/>
+			</line>
+			<line>
+				<reportElement x="274" y="0" width="1" height="26" uuid="725dd33c-1286-49cf-b400-59331b25c4e0"/>
+			</line>
+			<line>
+				<reportElement x="164" y="0" width="1" height="26" uuid="e8a214d3-2d7c-4b01-acd1-6e994b151472"/>
+			</line>
+			<staticText>
+				<reportElement x="275" y="0" width="54" height="25" uuid="9842ae7e-f338-45af-a042-287547c8539b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="0" width="55" height="25" uuid="342be399-534f-4116-95f3-201213238c52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Date Of Entry]]></text>
+			</staticText>
+			<line>
+				<reportElement x="219" y="0" width="1" height="26" uuid="e806a106-8d85-4275-bf9e-db4d85d358c3"/>
+			</line>
+			<line>
+				<reportElement x="329" y="0" width="1" height="26" uuid="1ebfd410-a3c0-4ea1-8131-529fbc1fcd0c"/>
+			</line>
+			<staticText>
+				<reportElement x="110" y="0" width="54" height="25" uuid="99a4b315-653c-414e-be66-2770d6ea9312"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Acc No]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="1" height="26" uuid="8f55868a-de74-451c-a04e-e7ae369cc554"/>
+			</line>
+			<staticText>
+				<reportElement x="220" y="0" width="54" height="25" uuid="045c257c-2f2c-417e-ac08-ca85bea0f6f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="ea8c914c-80c3-4bb4-8680-240bd3eab880"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="54" y="0" width="55" height="20" uuid="13e97755-c4ef-40cc-adeb-ce16783930fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_department}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="274" y="0" width="1" height="20" uuid="58b94e21-8db9-4d30-9974-bd84713ce549"/>
+			</line>
+			<line>
+				<reportElement x="219" y="0" width="1" height="20" uuid="262698f5-611e-4358-b706-f625ee295072"/>
+			</line>
+			<line>
+				<reportElement x="439" y="0" width="1" height="20" uuid="28f08819-b28d-4e14-ac95-ea656e57ba25"/>
+			</line>
+			<line>
+				<reportElement x="384" y="0" width="1" height="20" uuid="f57281de-9593-4bab-85d4-d31292608a64"/>
+			</line>
+			<textField>
+				<reportElement x="219" y="0" width="55" height="20" uuid="eb2496e5-a59c-4916-9ea4-707f55558023"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_language}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="54" y="0" width="1" height="20" uuid="626b879b-c682-4f81-8392-f982b1c33d47"/>
+			</line>
+			<textField>
+				<reportElement x="384" y="0" width="55" height="20" uuid="16ffc5fd-b329-4dd8-89ab-c41b50b36400"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="60" height="20" uuid="6e4693c0-2572-4a7a-982b-d1ca82b55e46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_copies}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="554" y="0" width="1" height="20" uuid="a8b9c894-7657-4da8-b077-5d8d694dc94c"/>
+			</line>
+			<line>
+				<reportElement x="494" y="0" width="1" height="19" uuid="0e93b2e9-bb5f-4b35-b37a-8c3457b1d189"/>
+			</line>
+			<line>
+				<reportElement x="164" y="0" width="1" height="20" uuid="27bf88dc-b544-4b90-9b5e-5b4e6e0f4f76"/>
+			</line>
+			<textField>
+				<reportElement x="164" y="0" width="55" height="20" uuid="704eb455-2d1e-450e-bc67-6653c0b6154a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="55" height="20" uuid="fc0f80be-8078-4fe1-97af-6c8089f167ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_acc_no}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="109" y="0" width="1" height="20" uuid="64d2ef8f-43f0-49f9-8076-13636145f49d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="20" uuid="6592ece2-e242-47db-809f-0332a97d1a40"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="53" height="20" uuid="ce3705c5-78ed-429b-96b1-c37b26eb017f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_date_of_entry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="54" height="20" uuid="841c3199-166e-44cd-a3cd-e7457acca531"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_pages}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="329" y="0" width="1" height="20" uuid="0b8dfd37-a3c2-4e88-9453-e0e8ed8fe9f4"/>
+			</line>
+			<textField>
+				<reportElement x="274" y="0" width="55" height="20" uuid="16ca477e-efbf-4044-b836-be8a9d036226"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="54" height="20" uuid="2077a74f-6e44-442b-af1f-848ff66f4436"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{magzine_m_subtitle}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="93e2b78a-c933-46a4-a1ea-b177d100df10"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="7ba9a2e9-3185-46e2-8835-436e6b52dbc4"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

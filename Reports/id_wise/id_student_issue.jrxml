@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="student_issue" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ffd17c51-950c-4e2a-8955-4e68d0ff4820">
+	<property name="ireport.zoom" value="1.2100000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="issue_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     student_issue.`rid` AS student_issue_rid,
+     student_issue.`book_accessing_no` AS student_issue_book_accessing_no,
+     student_issue.`student_id` AS student_issue_student_id,
+     student_issue.`issue_date` AS student_issue_issue_date,
+     student_issue.`return_date` AS student_issue_return_date
+FROM
+     `student_issue` student_issue
+
+where
+      rid = $P{issue_id};]]>
+	</queryString>
+	<field name="student_issue_rid" class="java.lang.Long"/>
+	<field name="student_issue_book_accessing_no" class="java.lang.String"/>
+	<field name="student_issue_student_id" class="java.lang.String"/>
+	<field name="student_issue_issue_date" class="java.lang.String"/>
+	<field name="student_issue_return_date" class="java.lang.String"/>
+	<group name="student_issue_rid">
+		<groupExpression><![CDATA[$F{student_issue_rid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="20b5c4c4-5b7d-41f6-a1b5-ca6efb35edab"/>
+				<imageExpression><![CDATA["C:\\Users\\Aditya\\OneDrive\\Desktop\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="184" y="0" width="201" height="35" forecolor="#9999FF" uuid="9bba629f-d09e-431b-87f1-0512776bb408"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Issue Book List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="2" uuid="1a15fc0e-afce-4700-a1b3-b8b396df79c6"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="35" uuid="621d2f5f-7f43-4a0d-89cc-af9760f6ed6c"/>
+			</line>
+			<line>
+				<reportElement x="554" y="2" width="1" height="33" uuid="83d6ac85-ca1b-4ae3-9053-e9607a5a7ba2"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="35" uuid="8e291c82-8bce-4ade-ba72-81504d12ed71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Transaction ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="35" uuid="eb8f544e-13e1-4703-a4df-3c597e2108ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Book Accessing No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="35" uuid="49302ab3-fad2-4346-8fa1-03ef368b5785"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="35" uuid="cfcc9fc5-8817-4bfa-b577-60407c00625e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="35" uuid="bcdd765e-3802-4e6e-b411-bd786492383b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="92b04fce-1ad3-4393-9a72-70cc2a7966c1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="35" width="555" height="1" uuid="1eaced86-c69e-483d-a0cc-bb5fcf878bc2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="34" uuid="3c7dd626-b68d-4268-beee-4a05196e6092"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="34" uuid="90d6ea02-b44e-474a-b8a2-0a357392817f"/>
+			</line>
+			<line>
+				<reportElement x="444" y="1" width="1" height="35" uuid="1b03ff0e-92b0-4b69-9f82-98039395ce79"/>
+			</line>
+			<line>
+				<reportElement x="333" y="1" width="1" height="34" uuid="7e329bee-cc25-496b-8938-6ce04678e3e6"/>
+			</line>
+			<line>
+				<reportElement x="222" y="1" width="1" height="35" uuid="b5aa84f3-796d-48cf-8627-409915a4b728"/>
+			</line>
+			<line>
+				<reportElement x="111" y="1" width="1" height="34" uuid="7bdfdd93-7a6a-4295-8342-93f54f5c59f8"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="e5268f92-7902-4a73-8bb4-7c018c495b99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{student_issue_rid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="158ba436-8095-4c14-85e1-12fa2f22b4e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{student_issue_book_accessing_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="ce5b7505-b7d6-4276-8541-ea5f058a48d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{student_issue_student_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="92725277-af63-4a04-b943-4154f3d07f4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{student_issue_issue_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="4127da0b-f5f3-41c8-ba95-a33fd8d2c8c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{student_issue_return_date}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="02eea71b-1747-4d97-98b4-2a2fba47b0c9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="21" uuid="f393dbac-4b4e-4135-a671-762561180e29"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="22" uuid="708f4165-a2ef-48a7-a042-978f459a1f13"/>
+			</line>
+			<line>
+				<reportElement x="444" y="0" width="1" height="21" uuid="153eb55a-cb63-439f-a876-73ab61fe3fe8"/>
+			</line>
+			<line>
+				<reportElement x="333" y="0" width="1" height="22" uuid="6e0eecea-3f33-4afe-a10d-298ef7251cc4"/>
+			</line>
+			<line>
+				<reportElement x="222" y="0" width="1" height="21" uuid="7a0a9da6-b5c1-4efd-bb4a-293cfc5eb368"/>
+			</line>
+			<line>
+				<reportElement x="111" y="0" width="1" height="22" uuid="8524b7d5-3308-42d0-8ee8-08a3bf10c994"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>

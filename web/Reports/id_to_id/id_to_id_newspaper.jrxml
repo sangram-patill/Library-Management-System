@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_to_id_newspaper" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ee252645-aed8-4b01-a515-37ada8f17d32">
+	<property name="ireport.zoom" value="2.8531167061100082"/>
+	<property name="ireport.x" value="17"/>
+	<property name="ireport.y" value="299"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     newspaper.`news_id` AS newspaper_news_id,
+     newspaper.`news_name` AS newspaper_news_name,
+     newspaper.`no_of_copies` AS newspaper_no_of_copies,
+     newspaper.`news_language` AS newspaper_news_language,
+     newspaper.`news_frequency` AS newspaper_news_frequency,
+     newspaper.`news_vendor` AS newspaper_news_vendor,
+     newspaper.`news_price` AS newspaper_news_price
+FROM
+     `newspaper` newspaper]]>
+	</queryString>
+	<field name="newspaper_news_id" class="java.lang.Long"/>
+	<field name="newspaper_news_name" class="java.lang.String"/>
+	<field name="newspaper_no_of_copies" class="java.lang.String"/>
+	<field name="newspaper_news_language" class="java.lang.String"/>
+	<field name="newspaper_news_frequency" class="java.lang.String"/>
+	<field name="newspaper_news_vendor" class="java.lang.String"/>
+	<field name="newspaper_news_price" class="java.lang.String"/>
+	<group name="newspaper_news_id">
+		<groupExpression><![CDATA[$F{newspaper_news_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="555" height="102" uuid="6a06f5c9-e676-4cce-b57a-dd09d8cbc467"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="148" y="559" width="277" height="115" forecolor="#9999FF" uuid="842cfe5d-99e9-4d42-89ac-8e20002f7db6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="1" height="35" uuid="17c38559-5991-484c-b3cb-8e06cffda603"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="35" uuid="9441d487-925c-45cf-bf85-2d9b7c1ef7aa"/>
+			</line>
+			<line>
+				<reportElement x="1" y="1" width="554" height="1" uuid="f581160e-749e-4e48-94b3-d2a63b72840a"/>
+			</line>
+			<staticText>
+				<reportElement x="206" y="0" width="144" height="34" forecolor="#9999FF" uuid="4ab8db9b-835c-49cd-9320-2a6eb4eb47b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Newspaper List]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="31" uuid="f58fa7ca-4fa9-48a0-9fcf-33c82d3143f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="78" height="31" uuid="9a402396-8288-45d6-8c73-1991691764f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement x="554" y="0" width="1" height="31" uuid="2fb26323-2832-4e9d-aeb7-368cec665821"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="31" uuid="979877c4-8951-464f-9fcd-2abbb20c2a96"/>
+			</line>
+			<line>
+				<reportElement x="474" y="1" width="1" height="30" uuid="86713164-949e-450d-9d03-88a491666545"/>
+			</line>
+			<line>
+				<reportElement x="316" y="0" width="1" height="31" uuid="c504de3d-a66a-44b5-a3b6-f60c733dd12c"/>
+			</line>
+			<line>
+				<reportElement x="158" y="1" width="1" height="30" uuid="231ad92b-5788-4f1c-8030-5c2d189c5650"/>
+			</line>
+			<staticText>
+				<reportElement x="237" y="0" width="79" height="31" uuid="99034e50-b5f5-42bc-a0a9-7a81e8370db3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="31" uuid="e3a80390-8470-49ea-867a-b8f28f41ec35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Copies]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="31" uuid="b43e8b57-d459-4161-aff3-432dfa6bb0d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="31" uuid="ccdba80b-d66f-4ad9-b30a-ac3104049f52"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<line>
+				<reportElement x="79" y="1" width="1" height="30" uuid="87f79c2c-f79e-498e-a363-3f69d02ea31e"/>
+			</line>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="31" uuid="49b98773-1800-459a-b27f-08d3752e931e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Frequency]]></text>
+			</staticText>
+			<line>
+				<reportElement x="394" y="1" width="1" height="30" uuid="e140ff2e-0353-4f60-8da6-9b6d014e1820"/>
+			</line>
+			<line>
+				<reportElement x="237" y="1" width="1" height="30" uuid="454a1193-c883-48ad-8611-fe677b0a14ce"/>
+			</line>
+			<line>
+				<reportElement x="1" y="1" width="554" height="1" uuid="ebd9a54d-27af-40e7-bb94-e87860067bdc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="30" width="554" height="1" uuid="2923d67f-44bf-49a8-b9ad-c6ce61767558"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="554" y="0" width="1" height="21" uuid="3be739a3-6aa4-42ca-b4c8-416b13aa2f7f"/>
+			</line>
+			<line>
+				<reportElement x="237" y="0" width="1" height="21" uuid="e2b023b0-58fc-4764-b20d-eca40a6dde6c"/>
+			</line>
+			<line>
+				<reportElement x="158" y="0" width="1" height="21" uuid="bd3aa7cf-126a-4a47-9cc8-68a5444eca50"/>
+			</line>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="20" uuid="3c9b96e8-ca71-4c56-bae9-6df6e0c03005"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_no_of_copies}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="20" uuid="84fb6a7c-488a-46a9-85f2-39413d0a24df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_language}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="316" y="0" width="1" height="21" uuid="144b4e85-3cef-41c3-9520-a9f3e59bba4b"/>
+			</line>
+			<textField>
+				<reportElement x="316" y="0" width="78" height="20" uuid="00ef9c3d-614e-4650-b7bb-6c2305722363"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_frequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="20" uuid="8ee67f04-9741-4474-aa64-fea2aa4a26d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_price}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="474" y="0" width="1" height="21" uuid="73813044-af83-4fdb-92eb-bae876e67913"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="21" uuid="f58bf107-cd3f-455e-86fc-bff8d5a98fa3"/>
+			</line>
+			<line>
+				<reportElement x="79" y="0" width="1" height="21" uuid="4544a8c8-d766-46bd-81de-d27fc815b662"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="dd8f34d5-6d6d-441e-85c1-1a7d17a6eb93"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="20" uuid="762398dd-c5c2-49b4-821c-e8068f4be9f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_vendor}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="fa3721f1-a3f3-47e6-b332-aae6883e314c"/>
+			</line>
+			<textField>
+				<reportElement x="80" y="1" width="79" height="20" uuid="0ed78ca8-6379-49ab-8ee0-4404c220124f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newspaper_news_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="394" y="0" width="1" height="21" uuid="be82de88-1dc5-4665-969b-31ac8b050586"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch"/>
+	</summary>
+</jasperReport>

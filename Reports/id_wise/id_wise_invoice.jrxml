@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="id_wise_vendor" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5390c33b-0480-4d2a-832c-88a4e4fefdc9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     vendor.`v_id` AS vendor_v_id,
+     vendor.`v_name` AS vendor_v_name,
+     vendor.`v_company` AS vendor_v_company,
+     vendor.`v_phone` AS vendor_v_phone,
+     vendor.`v_email` AS vendor_v_email,
+     vendor.`v_address` AS vendor_v_address,
+     vendor.`v_taluka` AS vendor_v_taluka,
+     vendor.`v_district` AS vendor_v_district,
+     vendor.`v_state` AS vendor_v_state
+FROM
+     `vendor` vendor
+
+where
+      v_id = $P{id};	]]>
+	</queryString>
+	<field name="vendor_v_id" class="java.lang.String"/>
+	<field name="vendor_v_name" class="java.lang.String"/>
+	<field name="vendor_v_company" class="java.lang.String"/>
+	<field name="vendor_v_phone" class="java.lang.String"/>
+	<field name="vendor_v_email" class="java.lang.String"/>
+	<field name="vendor_v_address" class="java.lang.String"/>
+	<field name="vendor_v_taluka" class="java.lang.String"/>
+	<field name="vendor_v_district" class="java.lang.String"/>
+	<field name="vendor_v_state" class="java.lang.String"/>
+	<group name="vendor_v_id">
+		<groupExpression><![CDATA[$F{vendor_v_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="61" height="20" uuid="e0991ee9-4e30-4339-8b65-e26483e4f31d"/>
+				<text><![CDATA[vendor_v_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="0" width="61" height="20" uuid="98a2856a-2a74-4145-a6d1-663bdd4e55c5"/>
+				<text><![CDATA[vendor_v_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="61" height="20" uuid="c4dd30f1-2972-4bba-b68a-34d869e84458"/>
+				<text><![CDATA[vendor_v_company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="61" height="20" uuid="ee554364-fd2e-4271-8d83-4c68195e9b69"/>
+				<text><![CDATA[vendor_v_phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="61" height="20" uuid="14d427c2-1752-40c2-a8a9-ffda07a6db43"/>
+				<text><![CDATA[vendor_v_email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="61" height="20" uuid="2ab65ee8-af8c-4f99-9024-f748bf745e88"/>
+				<text><![CDATA[vendor_v_address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="61" height="20" uuid="616e2654-4541-40eb-9746-78a7928894dc"/>
+				<text><![CDATA[vendor_v_taluka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="61" height="20" uuid="edd71ece-22a1-4858-8a6c-70b0c994fa02"/>
+				<text><![CDATA[vendor_v_district]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="61" height="20" uuid="d8aeca17-7a78-4e1c-8192-eabb84fdf534"/>
+				<text><![CDATA[vendor_v_state]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="fb72bef2-34f9-409f-8c79-608b0d1abd48"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="61" height="20" uuid="a8f9dbc5-bdab-4fcb-b00e-cb130c0f80dd"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="0" width="61" height="20" uuid="819f1948-eeaf-4e3c-b8f9-1e15301abe9d"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_company}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="61" height="20" uuid="5b237320-2ca6-4083-b0bb-8ad7ed3f9fb2"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="0" width="61" height="20" uuid="877285e3-2ecb-4d21-938e-c7a8c9670213"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="61" height="20" uuid="d6977f39-f3c1-4346-8e59-0a93716e2e98"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="61" height="20" uuid="d662ae27-d1ae-42c2-a251-65bd9359c184"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_taluka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="61" height="20" uuid="ed7a6c45-1a27-462c-9490-4b49d3b39c81"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_district}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="61" height="20" uuid="7ed68e73-b047-47fc-90e9-c92db842b9fc"/>
+				<textFieldExpression><![CDATA[$F{vendor_v_state}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

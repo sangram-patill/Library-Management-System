@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="department" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="85209673-f01a-4350-9258-2cb9ba845664">
+	<property name="ireport.zoom" value="4.594972986357241"/>
+	<property name="ireport.x" value="71"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     department.`d_id` AS department_d_id,
+     department.`d_name` AS department_d_name,
+     department.`course_name` AS department_course_name
+FROM
+     `department` department]]>
+	</queryString>
+	<field name="department_d_id" class="java.lang.Long"/>
+	<field name="department_d_name" class="java.lang.String"/>
+	<field name="department_course_name" class="java.lang.String"/>
+	<group name="department_d_id">
+		<groupExpression><![CDATA[$F{department_d_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="-12" width="555" height="101" uuid="ec7e52f5-8fb3-43f9-87d5-e76d2b097f08"/>
+				<imageExpression><![CDATA["C:\\Users\\sangr\\Downloads\\PicsArt_05-06-12.19.39.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="fd265deb-6edf-4da4-972e-4e2ae6950a59"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="35" uuid="72a6971e-5282-464c-8491-88af7f02556c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="4dcfc18d-353d-4abc-ad36-846a7910cc2c"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="33" uuid="e5e72f3c-9d23-4079-96a7-70870f1568ac"/>
+			</line>
+			<staticText>
+				<reportElement x="186" y="1" width="184" height="33" forecolor="#9999FF" uuid="adb635de-f3c7-4ec4-a84c-0af60555b80c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department List]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="29" uuid="5fbd2e14-825a-4932-9e8b-25e4cef1d746"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[department_d_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="29" uuid="01bed026-d7a9-4ab6-aa86-8b522aedaf21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[department_d_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="29" uuid="55068552-821f-468e-ab95-9903a1efcb56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[department_course_name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="0d9970be-9e91-4da7-a751-3fb5c9ed9248"/>
+			</line>
+			<line>
+				<reportElement x="185" y="0" width="1" height="29" uuid="34b2c4f3-bc64-47f6-8fcc-3d52c1a28c4d"/>
+			</line>
+			<line>
+				<reportElement x="370" y="0" width="1" height="29" uuid="ab19a9d8-811c-4a34-bb09-741489fcfd29"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="30" uuid="d5b4c6ab-9968-4339-a426-acff71dc567f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="29" uuid="e1700e1e-be13-4d7a-9feb-a6dd5fc33973"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="aad0b0d1-9f5b-4b2c-9b70-f79a9e1b5b49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{department_d_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="dec20724-ed60-4ca7-81dd-aa1ef2366189"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{department_d_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="d9457f04-cb06-4117-9b17-f5311b287303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{department_course_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="6f8de90d-b092-47a7-aab4-63631a9d54dc"/>
+			</line>
+			<line>
+				<reportElement x="185" y="0" width="1" height="21" uuid="6dce1bac-dd0d-4d3a-97ad-34b65efefc37"/>
+			</line>
+			<line>
+				<reportElement x="370" y="0" width="1" height="21" uuid="5f31c017-f613-49c4-8bfc-7cdb3f525fb9"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="21" uuid="8991abe4-b66e-4704-84df-60e2395bfb2e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="21" uuid="7da241f5-6669-42f9-8769-fed0cbf602d5"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="15" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="23" splitType="Stretch"/>
+	</summary>
+</jasperReport>

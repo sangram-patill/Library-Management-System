@@ -1,0 +1,411 @@
+/* 
+    Document   : style
+    Created on : 26 Feb, 2023, 4:24:35 PM
+    Author     : Aditya
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+html, body{
+   
+    background: whitesmoke;
+}
+
+nav{
+    width: 20vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #22A39F;
+    box-shadow: 5px rgba(0,0,0,0.5);
+    overflow-y: scroll;
+    z-index: 1; 
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+nav .heading{
+    margin-left: 5%;
+    margin-top: 5%; 
+    font-size: 29.7px;
+}
+nav .heading:hover{
+   
+    margin-top: 5%; 
+    color: #f1f1f1;
+    
+}
+nav ul{
+    position: relative;
+    list-style-type: none;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    font-size:  15px;    
+    color: #000;
+    padding: 10px 20px;
+    height: 50px;
+    transition: .5s ease;    
+}
+nav ul li a span{
+   position: absolute;
+   right: 25px;
+   font-size: 1.5em;
+   margin-top: 23px;
+   transform: translateY(-50%);
+}
+nav ul li a span.rotate{
+    transform: translateY(-50%)rotate(-180deg);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background: #22A39F; 
+    color: white;
+    text-decoration: none;
+}
+
+nav ul ul{
+    position: relative;
+    width: 100%;
+    top: 0px;
+    display: none;
+    background-color: #22A39F;  
+    z-index: 1; 
+    text-decoration: none;
+}
+
+nav ul li ul {
+    padding-left: 5px;
+}
+
+nav ul .stock-show.show{
+    display: block;
+}
+nav ul .master-show.show2{
+    display: block;
+}
+nav ul .modify-show.show3{
+    display: block;
+}
+nav ul .trans-show.show4{
+    display: block;
+}
+nav ul .curr-show.show5{
+    display: block;
+}
+nav ul .user-show.show6{
+    display: block;
+}
+nav ul .stock-modify-show.show7{
+    display: block;
+}
+nav ul .general-modify-show.show8{
+    display: block;
+}
+nav ul .give-show.show9{
+    display: block;
+}
+
+
+/*Card css*/
+
+.logo{
+    height: 70px;
+    width: 80px;
+    margin-left: 20px;
+}
+.btn{
+    background: #22A39F;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn:hover{
+    color: #22A39F;
+    background: white;
+    padding: 3px 8px;
+    border: 2px solid #22A39F;
+}
+
+.container{ 
+    right: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #f1f1f1;
+    position: absolute;
+}
+
+.container .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 9.1vh;
+    background: #4FBDBA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+.container .header .nav .search input[type=text]{
+    border: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 50%;
+}
+.container .header .nav .search button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .nav .user{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .header .nav .user img{
+    width: 40px;
+    height: 40px;
+    margin-left: 130px;
+}
+
+.container .header .nav .user .img-case{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.container .header .nav .user .img-case img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background: #f1f1f1;
+    margin-left: -74px;     /*change margin here*/
+}
+
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1050px){
+    nav li a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    nav li a{
+        display: none;
+    }
+    nav{
+        align-items: center;
+    }
+    nav li img{
+        width: 40px;
+        height: 40px;
+    }
+    nav li:hover{
+        background: #22A39F;
+        padding: 8px 38px;
+        border: 2px solid white;
+    }
+    .container .header .nav .logo{        
+            height: 50px;
+            width: 60px;
+            
+    }
+}
+
+@media screen and (max-width: 536px){
+    .brand-name .logo{
+        height: 70px;
+        width: 80px;
+    }
+    h1{
+        font-size: 16px;
+    }
+    .container .content .cards{
+        justify-content: center;
+        position: fixed;
+    }
+    nav li img{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .container .header .nav .logo{        
+            height: 40px;
+            width: 30px;
+    }
+}
+
+/*Dashboard Small Div*/
+
+.one .first{
+    height: 100px;
+    width: 250px;
+    background-color: #F5F5F5;
+    margin-left: 6%;
+    font-size: 14px;
+}
+
+.one .second{
+    height: 100px;
+    width: 250px;
+    background-color: #F5F5F5;
+    margin-left: 1%;
+    font-size: 14px;
+}
+
+.one .third{
+    height: 100px;
+     width: 250px;
+    background-color: #F5F5F5;
+    margin-left: 1%;
+    font-size: 14px;
+}
+
+.one .four{
+    height: 100px;
+     width: 250px;
+    background-color: #F5F5F5;
+    margin-left: 1%;
+    font-size: 14px;
+}
+
+
+
+/*Custom Css*/
+
+.container .content .cards .labelclass{
+    margin-left:14%;
+}
+
+.container .content .cards .textboxclass{
+   width: 175px;
+}
+
+.container .content .cards .addbook{
+    color: black;
+    background: #4FBDBA;
+    width: 130px;
+    height: 30px;
+    margin-left: 5px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.container .content .cards .x{
+    margin-left: 50px;
+}
+
+.container .content .cards .y{
+    margin-left: 50px;
+    width: 250px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+
+/*Stock Button*/
+
+.stock{
+      float: right;
+      background-color: #4FBDBA;
+      color: #fff;        
+      width: auto;
+      height: 28px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+
+/*Table CSS*/
+ table {
+      border-collapse: collapse;
+      width: 98.5%;
+      margin-left: 1%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+th, td {
+      padding: 12px 15px;
+      text-align: center;
+      font-size: 12px;
+      border-style: groove;
+}
+
+th {
+      background-color: #555; 
+      color: #fff;
+}
+
+tr:nth-child(even) {
+      background-color: #f2f2f2;
+}
+
+tr:hover {
+      background-color: #ddd;
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.image1{
+    height: 50px;
+    width: 50px;
+}
+
+canvas{
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+}

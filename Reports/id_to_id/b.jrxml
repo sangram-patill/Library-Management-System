@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="b" language="groovy" pageWidth="1400" pageHeight="595" orientation="Landscape" columnWidth="1360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf627221-2f91-45d8-aa55-9df15c96975b">
+	<property name="ireport.zoom" value="0.8264462809917354"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     add_book.`b_date_of_entry` AS add_book_b_date_of_entry,
+     add_book.`b_department` AS add_book_b_department,
+     add_book.`b_acc_no` AS add_book_b_acc_no,
+     add_book.`b_category` AS add_book_b_category,
+     add_book.`b_classificationcode` AS add_book_b_classificationcode,
+     add_book.`b_title` AS add_book_b_title,
+     add_book.`b_subtitle` AS add_book_b_subtitle,
+     add_book.`b_subject` AS add_book_b_subject,
+     add_book.`b_edition` AS add_book_b_edition,
+     add_book.`b_copies` AS add_book_b_copies,
+     add_book.`author_1` AS add_book_author_1,
+     add_book.`author_2` AS add_book_author_2,
+     add_book.`author_3` AS add_book_author_3,
+     add_book.`author_4` AS add_book_author_4,
+     add_book.`b_publishername` AS add_book_b_publishername,
+     add_book.`b_publishingyear` AS add_book_b_publishingyear,
+     add_book.`b_vendorname` AS add_book_b_vendorname,
+     add_book.`b_pages` AS add_book_b_pages,
+     add_book.`b_price` AS add_book_b_price,
+     add_book.`b_rackno` AS add_book_b_rackno,
+     add_book.`b_language` AS add_book_b_language,
+     add_book.`b_status` AS add_book_b_status
+FROM
+     `add_book` add_book]]>
+	</queryString>
+	<field name="add_book_b_date_of_entry" class="java.lang.String"/>
+	<field name="add_book_b_department" class="java.lang.String"/>
+	<field name="add_book_b_acc_no" class="java.lang.String"/>
+	<field name="add_book_b_category" class="java.lang.String"/>
+	<field name="add_book_b_classificationcode" class="java.lang.String"/>
+	<field name="add_book_b_title" class="java.lang.String"/>
+	<field name="add_book_b_subtitle" class="java.lang.String"/>
+	<field name="add_book_b_subject" class="java.lang.String"/>
+	<field name="add_book_b_edition" class="java.lang.String"/>
+	<field name="add_book_b_copies" class="java.lang.String"/>
+	<field name="add_book_author_1" class="java.lang.String"/>
+	<field name="add_book_author_2" class="java.lang.String"/>
+	<field name="add_book_author_3" class="java.lang.String"/>
+	<field name="add_book_author_4" class="java.lang.String"/>
+	<field name="add_book_b_publishername" class="java.lang.String"/>
+	<field name="add_book_b_publishingyear" class="java.lang.String"/>
+	<field name="add_book_b_vendorname" class="java.lang.String"/>
+	<field name="add_book_b_pages" class="java.lang.String"/>
+	<field name="add_book_b_price" class="java.lang.String"/>
+	<field name="add_book_b_rackno" class="java.lang.String"/>
+	<field name="add_book_b_language" class="java.lang.String"/>
+	<field name="add_book_b_status" class="java.lang.String"/>
+	<group name="add_book_b_date_of_entry">
+		<groupExpression><![CDATA[$F{add_book_b_date_of_entry}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="283" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="1360" height="264" uuid="c2c77ddc-3065-47a2-8bdd-2a29b775c80a"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="68" height="20" uuid="d8189d2b-c205-4618-bf6f-129ef6b4755e"/>
+				<text><![CDATA[add_book_author_1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="0" width="68" height="20" uuid="6e205d1e-f967-45c8-897c-2718bfe82701"/>
+				<text><![CDATA[add_book_b_subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="0" width="68" height="20" uuid="5b80bb91-b631-45b9-8c18-3003bce6364f"/>
+				<text><![CDATA[add_book_b_category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="68" height="20" uuid="399947e5-655c-4c60-8874-63ce686478d5"/>
+				<text><![CDATA[add_book_b_department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="0" width="68" height="20" uuid="b44eb730-8140-479b-a755-234df606507e"/>
+				<text><![CDATA[add_book_b_subtitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="68" height="20" uuid="429e6ee1-156d-4889-8d1a-22b036848ae7"/>
+				<text><![CDATA[add_book_b_title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="0" width="68" height="20" uuid="d05c32a7-f251-4b83-b766-7ac404659f22"/>
+				<text><![CDATA[add_book_b_edition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="68" height="20" uuid="dbee8937-198c-4896-b845-02e126b87086"/>
+				<text><![CDATA[add_book_b_date_of_entry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="0" width="68" height="20" uuid="c508303e-706a-4a06-8c30-63f9a3aa00ed"/>
+				<text><![CDATA[add_book_b_classificationcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="0" width="68" height="20" uuid="c3c57c3e-5f06-4972-8d2c-daa1abda37e3"/>
+				<text><![CDATA[add_book_b_acc_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="68" height="20" uuid="a16f7f7c-8e3c-452d-966f-1c5e26f4f796"/>
+				<text><![CDATA[add_book_author_2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="0" width="68" height="20" uuid="af092d40-00b2-495b-a81f-95cbe985abaf"/>
+				<text><![CDATA[add_book_author_3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="816" y="0" width="68" height="20" uuid="1c5a6a00-9d71-4d79-8ed5-98f77448606e"/>
+				<text><![CDATA[add_book_author_4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="884" y="0" width="68" height="20" uuid="029120cd-9f64-402f-8057-6bed2c19a3c7"/>
+				<text><![CDATA[add_book_b_publishername]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="952" y="0" width="68" height="20" uuid="a978fe4f-0f4d-4aa2-b106-d89eb0c27b73"/>
+				<text><![CDATA[add_book_b_publishingyear]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1020" y="0" width="68" height="20" uuid="234c3910-1e96-44c0-989e-6a72cf35a83c"/>
+				<text><![CDATA[add_book_b_vendorname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1088" y="0" width="68" height="20" uuid="b9442515-1d48-49a6-8725-169792782019"/>
+				<text><![CDATA[add_book_b_pages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1156" y="0" width="68" height="20" uuid="5dc8c6c7-7f71-4d10-b2a9-d3c03da09e8c"/>
+				<text><![CDATA[add_book_b_price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1224" y="0" width="68" height="20" uuid="11ad908c-ba5d-41d7-aa23-9a87c20b87f0"/>
+				<text><![CDATA[add_book_b_rackno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1292" y="0" width="68" height="20" uuid="aaf17f30-90a0-4134-ae2b-2da314b88730"/>
+				<text><![CDATA[add_book_b_language]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="68" height="20" uuid="e8f2e2ad-e2a0-4c24-8ad7-2ec2a2b349ed"/>
+				<textFieldExpression><![CDATA[$F{add_book_author_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="0" width="68" height="20" uuid="327caf80-b7ed-4b66-9c45-35527f318775"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="0" width="68" height="20" uuid="e574810e-5e91-4220-8b5e-f990c451872d"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="0" width="68" height="20" uuid="6485ead8-f360-4b41-a8cf-ec6ad5e38deb"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="0" width="68" height="20" uuid="a65411f5-f839-4dc3-95b0-e43cf5d420aa"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_subtitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="68" height="20" uuid="19fbe096-bce6-43bd-bd7e-97a361244c62"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="0" width="68" height="20" uuid="be1b34a4-8ffc-4804-9bfd-87b4797c7ff2"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_edition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="68" height="20" uuid="9c538b19-ee1d-407d-970a-424fc6766c33"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_date_of_entry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="0" width="68" height="20" uuid="4243c808-d7e4-421c-9264-180e8717de92"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_classificationcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="612" y="0" width="68" height="20" uuid="270a9ad8-b249-47c3-9258-65ba22b919f9"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_acc_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="68" height="20" uuid="30be0662-6196-47c8-bbe9-b9ebed157edc"/>
+				<textFieldExpression><![CDATA[$F{add_book_author_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="748" y="0" width="68" height="20" uuid="bdd7d1d4-315f-453c-a51a-e8ef6e5fa3fb"/>
+				<textFieldExpression><![CDATA[$F{add_book_author_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="816" y="0" width="68" height="20" uuid="e2872897-47bb-4e4d-9be3-77cabfaa89a3"/>
+				<textFieldExpression><![CDATA[$F{add_book_author_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="884" y="0" width="68" height="20" uuid="faf7a4fe-7531-4e0c-8457-ec07d222c4f6"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_publishername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="952" y="0" width="68" height="20" uuid="7458c4ac-0355-4aba-86b1-1a24823de352"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_publishingyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1020" y="0" width="68" height="20" uuid="65e0b542-d722-4d6d-bfdb-c6956d5d6945"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_vendorname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1088" y="0" width="68" height="20" uuid="0548ac41-ae6c-451a-8db7-b2dfd0f58a15"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_pages}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1156" y="0" width="68" height="20" uuid="68152094-d98b-4f5e-a8db-eb3244273d91"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1224" y="0" width="68" height="20" uuid="fee7b195-24c9-4cba-aff4-d47b5d89c474"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_rackno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1292" y="0" width="68" height="20" uuid="1fc4092f-da18-4a06-bb34-db23bf2d150c"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_language}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="staff_return" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68ebca8d-e2ad-448f-beb0-c19a9ca54632">
+	<property name="ireport.zoom" value="3.4522712143931042"/>
+	<property name="ireport.x" value="685"/>
+	<property name="ireport.y" value="185"/>
+	<parameter name="staff_return_acc1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="staff_return_acc2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     staff_return.`rid` AS staff_return_rid,
+     staff_return.`book_accessing_no` AS staff_return_book_accessing_no,
+     staff_return.`staff_id` AS staff_return_staff_id,
+     staff_return.`return_date` AS staff_return_return_date
+FROM
+     `staff_return` staff_return
+
+where
+     rid >=$P{staff_return_acc1} && rid<=$P{staff_return_acc2};]]>
+	</queryString>
+	<field name="staff_return_rid" class="java.lang.Long"/>
+	<field name="staff_return_book_accessing_no" class="java.lang.String"/>
+	<field name="staff_return_staff_id" class="java.lang.String"/>
+	<field name="staff_return_return_date" class="java.lang.String"/>
+	<group name="staff_return_rid">
+		<groupExpression><![CDATA[$F{staff_return_rid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="9919be3f-b66d-4358-b708-94039bf426db"/>
+				<imageExpression><![CDATA["C:\\Users\\Aditya\\OneDrive\\Desktop\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="0" width="197" height="35" forecolor="#9999FF" uuid="bc59714c-c2ad-4ccc-94e7-afe87450cfe1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Staff Return Book List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="555" height="2" uuid="4205fc8f-7137-4522-a3a0-3070896d6f26"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="34" uuid="ef4d7a4c-a2c8-4e77-b527-3e8d21493781"/>
+			</line>
+			<line>
+				<reportElement x="554" y="3" width="1" height="32" uuid="6ca7b5e7-facd-43c2-bc44-ae84c3449b22"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="38" uuid="3a7dbd7c-1fc0-4f03-8374-4c025f83c7ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Transaction ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="38" uuid="c619d792-c674-4e2b-9d98-f8ec1ad3d5f9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Accessing No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="38" uuid="7de5f2d0-5e57-4601-9dfd-42af12f9ba75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Staff ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="38" uuid="121c5a22-246a-47e1-88ab-70397566905a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="d882d85a-b57c-4f29-971d-caebade80ad8"/>
+			</line>
+			<line>
+				<reportElement x="0" y="38" width="555" height="1" uuid="9440539b-c898-4b26-9cad-10e3c4fc615b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="37" uuid="d404e4be-d961-47d5-84d4-e957ca531bc6"/>
+			</line>
+			<line>
+				<reportElement x="138" y="1" width="1" height="37" uuid="2119b069-46a8-4f5a-9835-1bffba4c23d1"/>
+			</line>
+			<line>
+				<reportElement x="276" y="1" width="1" height="37" uuid="fe5ad0ef-9bbe-424b-b81c-2991fec158ae"/>
+			</line>
+			<line>
+				<reportElement x="414" y="1" width="1" height="37" uuid="355e6b0e-a228-4cd6-b114-aaae56149681"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="37" uuid="1fd01ba6-c8a5-419e-b72f-3894c0156165"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="1cbd3df8-e8c0-494b-8177-802b0541344f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{staff_return_rid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="2c64bca4-e962-416b-8bed-4e48096ce89a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{staff_return_book_accessing_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="266da41a-ea81-4284-99fc-55e04c493016"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{staff_return_staff_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="8fe7258c-af73-4e3e-aa52-a26d6515d421"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{staff_return_return_date}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="5f2a7a9c-8db7-4033-bafc-581a2a10cf62"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20" uuid="6f95cbb8-981a-42c4-b357-8951e901cfcf"/>
+			</line>
+			<line>
+				<reportElement x="138" y="0" width="1" height="20" uuid="9b74bb46-93ec-4f59-be8e-2496e5790d02"/>
+			</line>
+			<line>
+				<reportElement x="276" y="0" width="1" height="20" uuid="3b5f50e1-7f9b-4e03-b52f-5f84315e4549"/>
+			</line>
+			<line>
+				<reportElement x="414" y="0" width="1" height="20" uuid="b94277b8-abc7-4e06-b1db-a7183ba9b1ce"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="21" uuid="7f4d4ccf-eba6-409c-ab17-2160197048d3"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="18" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

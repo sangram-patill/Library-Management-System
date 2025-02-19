@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lost_journal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea8fd907-d2d4-4f32-9868-044ce2d3ebe3">
+	<property name="ireport.zoom" value="1.464100000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="j_date1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="j_date2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     lost_journal.`accessing_no` AS lost_journal_accessing_no,
+     lost_journal.`journal_title` AS lost_journal_journal_title,
+     lost_journal.`category` AS lost_journal_category,
+     lost_journal.`date` AS lost_journal_date,
+     lost_journal.`lost_disposal` AS lost_journal_lost_disposal,
+     lost_journal.`reason` AS lost_journal_reason
+FROM
+     `lost_journal` lost_journal
+
+where
+     date >=$P{j_date1} && date<=$P{j_date2};]]>
+	</queryString>
+	<field name="lost_journal_accessing_no" class="java.lang.String"/>
+	<field name="lost_journal_journal_title" class="java.lang.String"/>
+	<field name="lost_journal_category" class="java.lang.String"/>
+	<field name="lost_journal_date" class="java.lang.String"/>
+	<field name="lost_journal_lost_disposal" class="java.lang.String"/>
+	<field name="lost_journal_reason" class="java.lang.String"/>
+	<group name="lost_journal_accessing_no">
+		<groupExpression><![CDATA[$F{lost_journal_accessing_no}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="555" height="102" uuid="d66d3b13-172c-40b7-8b04-9e2671fd3e77"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="8e80cec4-4f30-44a7-bd4a-f4b0de8b8ec3"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="35" uuid="09fbbff5-1a76-4322-8a1a-b1df536a19c8"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="35" uuid="70b5431b-1db9-4969-b148-336b0bde6790"/>
+			</line>
+			<staticText>
+				<reportElement x="203" y="0" width="165" height="35" forecolor="#9999FF" uuid="8b1e16f3-4653-40a3-9679-58d97a851768"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lost Journal List]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="91" height="31" uuid="93c93705-31d9-4548-9e21-00679ba14d7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Accessing No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="91" height="31" uuid="18b83e51-65ac-4d78-969b-b9a15d8ee3ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="91" height="31" uuid="28d0d720-0553-4efa-aa05-373e2a9d1f9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="90" height="30" uuid="16aa7538-4231-47a9-936e-fa357a23e440"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Lost Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="31" uuid="3ad25f8c-2848-452f-bbd2-cef1596acde8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Lost/Disposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="0" width="93" height="31" uuid="a7795809-e716-432d-92b8-aa65f9e82829"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Reason]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="555" height="1" uuid="daac6c55-cdee-4896-bb5a-0151d359a2d9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="f4117e12-939c-477c-a796-a769e0532f78"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="29" uuid="fa9dd4e4-75b0-4e35-b70e-711625321bca"/>
+			</line>
+			<line>
+				<reportElement x="92" y="1" width="1" height="29" uuid="790e355d-8937-4e01-8db9-bd48a2a7dd79"/>
+			</line>
+			<line>
+				<reportElement x="184" y="1" width="1" height="29" uuid="aa289617-c138-42a7-87b6-2c072bc2a375"/>
+			</line>
+			<line>
+				<reportElement x="276" y="0" width="1" height="31" uuid="5dea16fa-e2fc-47f7-ad1c-d0037ee77f1c"/>
+			</line>
+			<line>
+				<reportElement x="367" y="0" width="1" height="31" uuid="eb65d9e8-2905-48b8-b2ab-6f4a2dc963f2"/>
+			</line>
+			<line>
+				<reportElement x="460" y="1" width="1" height="29" uuid="37b6437d-8eca-4563-abb3-9f39a0272eb6"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="29" uuid="f1251968-eaa4-47b1-9ffd-c974e12822ad"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="91" height="20" uuid="6121883c-c2d2-46c4-8ff6-fe1c371416c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_accessing_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="0" width="91" height="20" uuid="30fcb9e6-ef2e-4644-8736-e5aac4959370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_journal_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="91" height="20" uuid="b17d95d2-cb1a-4fa4-b29b-6d677a967ab3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="92" height="20" uuid="339faf80-e7f9-47b7-af60-875d2c9b5630"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="20" uuid="0ef2f02b-0ad2-4f8b-b7a0-e0290baf335f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_lost_disposal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="0" width="93" height="20" uuid="5bf55871-ef94-4e04-b5ba-c9c35beaea4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lost_journal_reason}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20" uuid="8c1f30ac-5336-4b6b-9649-6abbe6e356bc"/>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="351bae79-e44e-4733-b25c-91ef16255a4a"/>
+			</line>
+			<line>
+				<reportElement x="92" y="0" width="1" height="20" uuid="da886215-7665-40dc-a022-59d476dfa682"/>
+			</line>
+			<line>
+				<reportElement x="184" y="0" width="1" height="20" uuid="57b5cb55-c639-41f2-8154-d4ca4144d5f0"/>
+			</line>
+			<line>
+				<reportElement x="276" y="-1" width="1" height="21" uuid="5a7d1fb2-f70e-46f3-b1f6-634de8e6f1ab"/>
+			</line>
+			<line>
+				<reportElement x="367" y="0" width="1" height="21" uuid="9a68215b-55b9-4340-94a0-2ffbaa305008"/>
+			</line>
+			<line>
+				<reportElement x="460" y="0" width="1" height="20" uuid="a94f19aa-6c7b-4386-bcdd-99d42a72378c"/>
+			</line>
+			<line>
+				<reportElement x="554" y="-1" width="1" height="21" uuid="37b3f728-8395-463a-bec0-4094ffd42d1c"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="22" splitType="Stretch"/>
+	</summary>
+</jasperReport>
