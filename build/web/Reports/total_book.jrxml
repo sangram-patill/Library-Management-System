@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="total_book" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="142d86af-a43c-4cf7-bc1c-99891aafb65d">
+	<property name="ireport.zoom" value="1.7715610000000022"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     add_book.`b_date_of_entry` AS add_book_b_date_of_entry,
+     add_book.`b_department` AS add_book_b_department,
+     add_book.`b_acc_no` AS add_book_b_acc_no,
+     add_book.`b_category` AS add_book_b_category,
+     add_book.`b_classificationcode` AS add_book_b_classificationcode,
+     add_book.`b_title` AS add_book_b_title,
+     add_book.`b_subtitle` AS add_book_b_subtitle,
+     add_book.`b_subject` AS add_book_b_subject,
+     add_book.`b_edition` AS add_book_b_edition,
+     add_book.`b_copies` AS add_book_b_copies,
+     add_book.`b_authorname` AS add_book_b_authorname,
+     add_book.`b_publishername` AS add_book_b_publishername,
+     add_book.`b_publishingyear` AS add_book_b_publishingyear,
+     add_book.`b_vendorname` AS add_book_b_vendorname,
+     add_book.`b_page` AS add_book_b_page,
+     add_book.`b_price` AS add_book_b_price,
+     add_book.`b_rackno` AS add_book_b_rackno,
+     add_book.`b_language` AS add_book_b_language
+FROM
+     `add_book` add_book]]>
+	</queryString>
+	<field name="add_book_b_date_of_entry" class="java.lang.String"/>
+	<field name="add_book_b_department" class="java.lang.String"/>
+	<field name="add_book_b_acc_no" class="java.lang.String"/>
+	<field name="add_book_b_category" class="java.lang.String"/>
+	<field name="add_book_b_classificationcode" class="java.lang.String"/>
+	<field name="add_book_b_title" class="java.lang.String"/>
+	<field name="add_book_b_subtitle" class="java.lang.String"/>
+	<field name="add_book_b_subject" class="java.lang.String"/>
+	<field name="add_book_b_edition" class="java.lang.String"/>
+	<field name="add_book_b_copies" class="java.lang.String"/>
+	<field name="add_book_b_authorname" class="java.lang.String"/>
+	<field name="add_book_b_publishername" class="java.lang.String"/>
+	<field name="add_book_b_publishingyear" class="java.lang.String"/>
+	<field name="add_book_b_vendorname" class="java.lang.String"/>
+	<field name="add_book_b_page" class="java.lang.String"/>
+	<field name="add_book_b_price" class="java.lang.String"/>
+	<field name="add_book_b_rackno" class="java.lang.String"/>
+	<field name="add_book_b_language" class="java.lang.String"/>
+	<group name="add_book_b_date_of_entry">
+		<groupExpression><![CDATA[$F{add_book_b_date_of_entry}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="187" y="23" width="449" height="20" uuid="c16103ee-d5f3-451a-88b7-4adb84e93953"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YASHWANTRAO CHAVAN MAHAVIDYALAYA URUN-ISLMAPUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="3" width="164" height="20" uuid="f3251397-1ff2-44ba-82ab-f62d059ec53a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Walwa Taluka Education Society's]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="52" width="290" height="20" uuid="d76d5568-ebc5-42ae-87cb-1a0881152683"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[S. D. Patil Nagar, Urun - Islampur, Tal - Walwa, Dist - Sangli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="72" width="69" height="20" uuid="9f3d2ac2-1e5c-481b-bc8f-b72b2b70d6dc"/>
+				<text><![CDATA[(Maharashtra)]]></text>
+			</staticText>
+			<image>
+				<reportElement x="23" y="3" width="96" height="96" uuid="0e4699a5-b81d-4979-8573-45d3525f517b"/>
+				<imageExpression><![CDATA["C:\\Users\\sangr\\Downloads\\fevicon.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement x="3" y="39" width="799" height="1" uuid="2c219556-3628-43f4-b3c0-949b28542206"/>
+			</line>
+			<staticText>
+				<reportElement x="352" y="12" width="113" height="20" uuid="40957d54-b404-4834-a3c7-9917a4d33693"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total No. Of Books]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="3" width="802" height="3" uuid="63b4dc4f-1c4b-4616-b48a-81bd88ec5a3e"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="20" uuid="01278670-3507-47c4-8dfb-80ca350b6e40"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Date of Entry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="56" height="20" uuid="947f9756-03a2-41ef-a1e4-9823e0ab8a33"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dept]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="0" width="57" height="20" uuid="55fdb5f0-6770-4d17-b533-c0296ae63e1e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acc_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="0" width="44" height="20" uuid="f305b682-ac81-4c83-8d63-f18de983221d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="33" height="20" uuid="379f1b71-b6ff-4006-ba86-e9f18b8abafe"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Class. Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="0" width="50" height="20" uuid="ba02e1a7-561a-4cfb-958a-f081f67b3d46"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="0" width="44" height="20" uuid="e159fefe-95a8-42c0-80ab-f63280346ec1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub-title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="44" height="20" uuid="48c9529f-d95d-494a-9af8-6ebb3107fb3e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="0" width="44" height="20" uuid="e92cb3cc-6a86-4b20-942e-7a57007ba069"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edition]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="0" width="44" height="20" uuid="c1a402f3-c694-457f-b7a4-bd5a6380cbe2"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Author ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="0" width="57" height="20" uuid="196bd870-8807-46e5-9dc0-87b0c17e7741"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Publisher]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="0" width="56" height="20" uuid="2b9bc52c-3af8-4ee6-8250-0ffff5d249e0"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pub. Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="592" y="0" width="44" height="20" uuid="8722c8a8-6769-4407-be74-382df3b4bb9c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="636" y="0" width="44" height="20" uuid="bd511e17-2fc9-4940-bab5-62b71b33a6e2"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="33" height="20" uuid="4f9180a4-9b97-4e75-aa57-1bc9c9c0d521"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="713" y="0" width="31" height="20" uuid="e5fb0878-ac58-4e50-b535-2bbbbf803d84"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rack]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="744" y="0" width="58" height="20" uuid="becaa399-13d9-4fcb-a741-1bfc702fb6ba"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="802" height="1" uuid="638ab699-beb1-439f-89db-fef0eb19e456"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="63" height="20" uuid="4dd0f001-0cef-44f5-a299-3a05de3c217a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_date_of_entry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="0" width="56" height="20" uuid="b8e54d0f-da97-4ea5-9280-c2f234cacd34"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="57" height="20" uuid="de17f7d9-a11c-4cba-8970-9d42f662f4a8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_acc_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="44" height="20" uuid="6c20f7c7-f402-401c-8f48-0a9cee62d3b1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="33" height="20" uuid="6eec15eb-f0a8-4375-a805-21eeb5717331"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_classificationcode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="0" width="50" height="20" uuid="ca64455e-64cc-473d-a450-80513336c43f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="44" height="20" uuid="f9578b72-d5a5-48b5-a0fe-fd7b439623df"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_subtitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="44" height="20" uuid="a5d84656-1295-404d-b67a-b021d60b3b05"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="44" height="20" uuid="46821efc-ab87-4fa5-bc24-ee503d7d9628"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_edition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="0" width="44" height="20" uuid="510813c4-442a-4709-adf8-6854c4f4ff3c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_authorname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="0" width="57" height="20" uuid="c3d8fbd9-ddd5-457d-a97c-ac79cda2c516"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_publishername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="56" height="20" uuid="6c05568d-cd95-47bb-b0e5-09cd54fd6b5f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_publishingyear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="592" y="0" width="44" height="20" uuid="0c09c941-801a-4097-9e62-5b3c3288975d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_vendorname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="636" y="0" width="44" height="20" uuid="1cd2209c-ea64-494c-b5cb-aff203e427bc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_page}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="33" height="20" uuid="ae03b3e5-4a4e-48b3-83d1-c7d2ec6308c3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="0" width="31" height="20" uuid="3ffcb7c5-0a5a-4de0-8825-218adf1c420e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_rackno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="744" y="0" width="58" height="20" uuid="8bab63e1-6bfe-424b-a1e6-149dfaf2c59b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{add_book_b_language}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

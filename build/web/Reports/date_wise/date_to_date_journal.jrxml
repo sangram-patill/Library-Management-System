@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="date_to_date_journal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="255a2081-0785-43fb-a2d7-0759fcca2242">
+	<property name="ireport.zoom" value="1.4641000000000057"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="j_date1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="j_date2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     journal.`j_date_of_entry` AS journal_j_date_of_entry,
+     journal.`j_department` AS journal_j_department,
+     journal.`j_acc_no` AS journal_j_acc_no,
+     journal.`j_category` AS journal_j_category,
+     journal.`j_language` AS journal_j_language,
+     journal.`j_title` AS journal_j_title,
+     journal.`j_subtitle` AS journal_j_subtitle,
+     journal.`j_subject` AS journal_j_subject,
+     journal.`j_pages` AS journal_j_pages,
+     journal.`j_copies` AS journal_j_copies
+FROM
+     `journal` journal
+
+where
+     j_date_of_entry >=$P{j_date1} && j_date_of_entry<=$P{j_date2};]]>
+	</queryString>
+	<field name="journal_j_date_of_entry" class="java.lang.String"/>
+	<field name="journal_j_department" class="java.lang.String"/>
+	<field name="journal_j_acc_no" class="java.lang.String"/>
+	<field name="journal_j_category" class="java.lang.String"/>
+	<field name="journal_j_language" class="java.lang.String"/>
+	<field name="journal_j_title" class="java.lang.String"/>
+	<field name="journal_j_subtitle" class="java.lang.String"/>
+	<field name="journal_j_subject" class="java.lang.String"/>
+	<field name="journal_j_pages" class="java.lang.String"/>
+	<field name="journal_j_copies" class="java.lang.String"/>
+	<group name="journal_j_date_of_entry">
+		<groupExpression><![CDATA[$F{journal_j_date_of_entry}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="555" height="102" uuid="d482a417-0de5-4918-be30-b96f5307a801"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="1" height="35" uuid="0e374c0c-2c9b-4e36-86d5-1c069afa6464"/>
+			</line>
+			<staticText>
+				<reportElement x="210" y="0" width="134" height="35" forecolor="#9999FF" uuid="5f104791-1fbf-46c7-b259-d4a476971158"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Journal List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="556" height="1" uuid="48516908-f03a-4946-a551-6051b7d128fa"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="35" uuid="7d329ad8-80e0-4eb7-80e9-dfd9415873ba"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<line>
+				<reportElement x="276" y="1" width="1" height="31" uuid="ebf453f0-3deb-493b-bcc8-a736604d369c"/>
+			</line>
+			<staticText>
+				<reportElement x="496" y="0" width="59" height="33" uuid="4fb2cd61-9910-49e7-9c0d-2a2d6943af2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Copies]]></text>
+			</staticText>
+			<line>
+				<reportElement x="56" y="0" width="1" height="32" uuid="272cb4ae-bd52-4045-bee4-380cf744ca9e"/>
+			</line>
+			<line>
+				<reportElement x="111" y="0" width="1" height="32" uuid="11713923-77f9-4118-ab01-bd0ea2fa3a28"/>
+			</line>
+			<staticText>
+				<reportElement x="166" y="0" width="55" height="33" uuid="c75728d4-a84d-4590-8551-560f09bac9ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<line>
+				<reportElement x="386" y="1" width="1" height="31" uuid="f4d304ec-4cb9-425b-93cd-9c9d0641783f"/>
+			</line>
+			<line>
+				<reportElement x="166" y="1" width="1" height="31" uuid="8b6d4418-d0b4-446d-9ec9-5f1f094d869a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="32" uuid="5d834504-0d2d-459d-9a93-2f8f4717f762"/>
+			</line>
+			<line>
+				<reportElement x="441" y="1" width="1" height="31" uuid="b24c4fc0-0676-4cd6-b8e0-0900b720d628"/>
+			</line>
+			<line>
+				<reportElement x="221" y="1" width="1" height="31" uuid="170dac49-0ac1-42c3-b2bd-405797f8f811"/>
+			</line>
+			<line>
+				<reportElement x="331" y="1" width="1" height="31" uuid="5301901b-c096-4f30-97b6-0a072128eb27"/>
+			</line>
+			<staticText>
+				<reportElement x="331" y="0" width="55" height="33" uuid="a7decee6-e64e-453e-83da-42b2cf81dcdb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subtitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="0" width="55" height="33" uuid="641720d6-3548-4b77-9275-b76c8545d1f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="55" height="33" uuid="5638d04c-b1e2-495c-aca2-72156ea9e688"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Entry]]></text>
+			</staticText>
+			<line>
+				<reportElement x="496" y="1" width="1" height="32" uuid="3eee521f-4fe5-49a7-9847-b846c7f1c0a4"/>
+			</line>
+			<staticText>
+				<reportElement x="56" y="0" width="55" height="33" uuid="1ed60b1a-9c9d-4172-8aec-887ca9e9633c"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="55" height="33" uuid="184cf172-289a-4b1d-98c9-8d7c8892696c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="55" height="33" uuid="3c0233d8-98fc-4943-ad81-86bfae166ca0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<line>
+				<reportElement x="555" y="0" width="1" height="33" uuid="f7e1ac8a-44aa-426d-bf0b-c15bee99f586"/>
+			</line>
+			<staticText>
+				<reportElement x="386" y="0" width="55" height="33" uuid="77cf2fc3-8bf3-4410-a8f5-50ae4251bcf7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="2" width="54" height="30" uuid="b001f835-8751-41c8-a843-c99a3f0684c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acc No]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="32" width="555" height="1" uuid="8fb056f4-7abc-44e2-8b5d-d5c6037cffc8"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="555" height="1" uuid="1830887b-9b9f-4b46-8ee9-f9ca294d488d"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement x="166" y="0" width="1" height="19" uuid="bb801ac8-99c6-4983-8650-4e9c15b73a0c"/>
+			</line>
+			<textField>
+				<reportElement x="221" y="0" width="55" height="20" uuid="daf05276-05e5-4212-b40c-effdaa0eda63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_language}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20" uuid="83952aec-914c-4fa4-9d42-d9c83073f995"/>
+			</line>
+			<textField>
+				<reportElement x="331" y="0" width="55" height="20" uuid="409fe1ab-20d2-4ee0-b81b-a3d23ddf5fe8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_subtitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="0" width="55" height="20" uuid="64f3eaca-4ae9-4312-b2aa-483e4efef038"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="55" height="20" uuid="131a4a36-5b98-4846-a857-398e5594811d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_title}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="496" y="0" width="1" height="19" uuid="bbe2d638-3450-461b-985d-a1824a92335e"/>
+			</line>
+			<line>
+				<reportElement x="111" y="0" width="1" height="19" uuid="58c6fc98-3ca8-4b1a-bd18-c8dab117e6c1"/>
+			</line>
+			<textField>
+				<reportElement x="386" y="0" width="55" height="20" uuid="fd57bb4c-d98d-4c73-ab35-7a7d5effd136"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="55" height="20" uuid="27cdfb04-cf93-4a6d-a4b8-8ac45c00f3d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_department}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="56" y="0" width="1" height="19" uuid="3dae3f5f-8006-4c59-9f58-73323f5d8815"/>
+			</line>
+			<line>
+				<reportElement x="0" y="19" width="556" height="1" uuid="eafbb2c2-930b-4a9b-898e-7656d2674759"/>
+			</line>
+			<line>
+				<reportElement x="331" y="0" width="1" height="19" uuid="0d14a0cd-cf07-4fd0-b779-86d50c9fc8d5"/>
+			</line>
+			<textField>
+				<reportElement x="441" y="0" width="55" height="20" uuid="cd1789f9-e9c0-4e5b-b638-be053e2c6bd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_pages}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="0" width="60" height="20" uuid="ad296983-920d-42e2-aa3c-eea3bb11fd0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_copies}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="55" height="20" uuid="e10c9e2c-7b02-445f-b32b-41a98e4c2fc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_acc_no}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="386" y="0" width="1" height="19" uuid="ea2f86f3-d2be-4c79-97d5-a4e24d4d243a"/>
+			</line>
+			<line>
+				<reportElement x="221" y="0" width="1" height="19" uuid="4a66f882-c755-4511-9f64-118047451a6e"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="55" height="20" uuid="13858bb4-75b2-4e4d-82c5-05068d342931"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{journal_j_date_of_entry}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="555" y="0" width="1" height="20" uuid="a19ccc4e-a620-41fc-8c05-6e93c805de93"/>
+			</line>
+			<line>
+				<reportElement x="276" y="0" width="1" height="19" uuid="ffca6ecc-5899-406b-9a61-d207296b4914"/>
+			</line>
+			<line>
+				<reportElement x="441" y="0" width="1" height="19" uuid="23ccf0e8-fff3-44e5-babe-d4bdc17edb7b"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

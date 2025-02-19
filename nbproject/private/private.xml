@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="6">
+        <file>
+            <url>web/library_assistant/library_assistant_dashboard.jsp</url>
+            <bookmark id="6">
+                <name/>
+                <line>292</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>web/add_book.jsp</url>
+            <bookmark id="1">
+                <name/>
+                <line>11</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>web/view_report.jsp</url>
+            <bookmark id="5">
+                <name/>
+                <line>25</line>
+                <key/>
+            </bookmark>
+            <bookmark id="4">
+                <name/>
+                <line>548</line>
+                <key/>
+            </bookmark>
+            <bookmark id="3">
+                <name/>
+                <line>1068</line>
+                <key/>
+            </bookmark>
+            <bookmark id="2">
+                <name/>
+                <line>1699</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/BCA%20PROJECT/library_management_system/web/add_book.jsp</file>
+            <file>file:/F:/BCA%20PROJECT/library_management_system/web/dashboard.jsp</file>
+            <file>file:/F:/BCA%20PROJECT/library_management_system/web/book_lost_entry.jsp</file>
+            <file>file:/F:/BCA%20PROJECT/library_management_system/web/staff.jsp</file>
+            <file>file:/F:/BCA%20PROJECT/library_management_system/web/student_return.jsp</file>
+        </group>
+    </open-files>
+</project-private>

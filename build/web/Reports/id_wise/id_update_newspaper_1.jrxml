@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="update_newspaper" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e623a6b9-1eb7-43d8-94be-e5b36210ed1e">
+	<property name="ireport.zoom" value="1.9487171000000045"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="u_p_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     update_newspaper.`date` AS update_newspaper_date,
+     update_newspaper.`news_name` AS update_newspaper_news_name
+FROM
+     `update_newspaper` update_newspaper
+
+where
+      news_name = $P{u_p_id};]]>
+	</queryString>
+	<field name="update_newspaper_date" class="java.lang.String"/>
+	<field name="update_newspaper_news_name" class="java.lang.String"/>
+	<group name="update_newspaper_date">
+		<groupExpression><![CDATA[$F{update_newspaper_date}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="108" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="1f085841-5017-4e56-8694-7110f43fdaeb"/>
+				<imageExpression><![CDATA["C:\\library_management_system\\library_management_system\\web\\image\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="184" y="0" width="179" height="35" forecolor="#9999FF" uuid="aa79b58e-dccf-4c65-a1ee-3b32cc5f6fab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Update Newspaper List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="1" height="35" uuid="a61c291b-bec2-48d2-8815-92d3c076d13d"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="35" uuid="7b3b0fb0-50e3-4206-afe0-a7f0b0f90def"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="113c2ac2-3393-42ff-926f-e1f80a2d2ac9"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="277" height="41" uuid="d246287a-d59f-4144-a7c5-debf94567206"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="277" height="41" uuid="b7143739-3dc4-4e44-a2d8-26496a2e28b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="41" width="555" height="1" uuid="ec59c727-8f2a-4316-9720-e1a2dbe107ec"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="09567e33-2e4b-43a7-bd03-477fa5ea7c29"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="42" uuid="d57c368f-5f1a-4b13-b0b0-4df8f291e036"/>
+			</line>
+			<line>
+				<reportElement x="277" y="0" width="1" height="41" uuid="e0bbc503-ca5b-4c2d-9913-837426f612da"/>
+			</line>
+			<line>
+				<reportElement x="554" y="1" width="1" height="40" uuid="dc67775a-007e-485f-90d5-b07a275d3f19"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="277" height="20" uuid="9e421055-a702-4abd-8416-58f8ba785793"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{update_newspaper_date}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="610adbc7-9f70-427d-a09b-562c81bc41f3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="1" height="21" uuid="c81a0d69-829b-4d95-851e-4404311e8423"/>
+			</line>
+			<textField>
+				<reportElement x="279" y="0" width="275" height="20" uuid="c7d3bcc5-9a73-4e12-8b69-7d525f6ac677"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{update_newspaper_news_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="277" y="0" width="1" height="20" uuid="09316f74-dcb4-48f0-89fc-80a9bdc17acf"/>
+			</line>
+			<line>
+				<reportElement x="554" y="-1" width="1" height="22" uuid="bba70f74-2fcd-4361-a7cb-341cb72a61b2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>

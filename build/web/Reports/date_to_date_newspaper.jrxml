@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="date_to_date_newspaper" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ab4d331-8688-449d-b062-fa7ae460f2c2">
+	<property name="ireport.zoom" value="1.6105100000000054"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     newspaper.`news_id` AS newspaper_news_id,
+     newspaper.`news_name` AS newspaper_news_name,
+     newspaper.`no_of_copies` AS newspaper_no_of_copies,
+     newspaper.`news_language` AS newspaper_news_language,
+     newspaper.`news_frequency` AS newspaper_news_frequency,
+     newspaper.`news_vendor` AS newspaper_news_vendor,
+     newspaper.`news_price` AS newspaper_news_price
+FROM
+     `newspaper` newspaper
+
+where
+     n_date_of_entry >=$P{n_date1} && n_date_of_entry<=$P{n_date2};]]>
+	</queryString>
+	<field name="newspaper_news_id" class="java.lang.Long"/>
+	<field name="newspaper_news_name" class="java.lang.String"/>
+	<field name="newspaper_no_of_copies" class="java.lang.String"/>
+	<field name="newspaper_news_language" class="java.lang.String"/>
+	<field name="newspaper_news_frequency" class="java.lang.String"/>
+	<field name="newspaper_news_vendor" class="java.lang.String"/>
+	<field name="newspaper_news_price" class="java.lang.String"/>
+	<group name="newspaper_news_id">
+		<groupExpression><![CDATA[$F{newspaper_news_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="102" uuid="01acc7c8-4002-4913-befa-5e7cc6b5c203"/>
+				<imageExpression><![CDATA["D:\\a.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="-1" y="0" width="1" height="35" uuid="ac0b1724-5f1a-4807-8246-285e77570f77"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="554" height="1" uuid="76641d84-4aec-43ad-9e2b-5535916e8277"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="35" uuid="72b3a49c-ba57-4c0e-91ae-4d48833ce642"/>
+			</line>
+			<staticText>
+				<reportElement x="205" y="0" width="144" height="34" forecolor="#9999FF" uuid="a6d051a8-ce36-40cf-8f74-cdfbce5d9661"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Newspaper List]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="554" height="1" uuid="0947a9e6-aa12-4665-8217-a18285a1fc56"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<line>
+				<reportElement x="315" y="0" width="1" height="31" uuid="43548be4-782d-4411-893e-747eb4ccbcd3"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="31" uuid="fffb9ea9-66d0-43be-8e92-9f36ed722f39"/>
+			</line>
+			<line>
+				<reportElement x="473" y="-1" width="1" height="32" uuid="b7102170-8d11-43a1-b996-223b73d5ced7"/>
+			</line>
+			<staticText>
+				<reportElement x="236" y="0" width="79" height="31" uuid="f6d237e4-2479-4c66-b937-589c0310f2df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Language]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="0" width="79" height="31" uuid="ed51ab91-b8c6-487f-8842-fa176a812d72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="78" height="31" uuid="837e51d7-1be4-4cd5-b61d-8b76f393c0df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement x="236" y="-1" width="1" height="32" uuid="0fd49abe-8c4a-4bfd-a834-29f5b1fcf60a"/>
+			</line>
+			<staticText>
+				<reportElement x="474" y="1" width="78" height="30" uuid="c7e8ad7e-0f9e-4a57-8cc4-58e89edae40c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="0" width="79" height="31" uuid="377b59b0-87b3-4c1d-81d0-526c71cde4e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Copies]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="79" height="31" uuid="1a48dcda-e7fc-4d8c-8f7b-296ccf553b55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vendor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="157" y="0" width="1" height="31" uuid="756da615-f277-4647-90dd-ea8c8026cd3e"/>
+			</line>
+			<line>
+				<reportElement x="554" y="0" width="1" height="31" uuid="d46e02a8-6860-4626-a31e-128709e6f842"/>
+			</line>
+			<line>
+				<reportElement x="78" y="0" width="1" height="31" uuid="5fbef2b0-c624-43e6-9903-0ce7f02ae3f1"/>
+			</line>
+			<staticText>
+				<reportElement x="315" y="0" width="79" height="31" uuid="b6690d7f-1122-4ffc-95d1-2e69f15f65ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Frequency]]></text>
+			</staticText>
+			<line>
+				<reportElement x="393" y="0" width="1" height="31" uuid="0864a1d1-33e8-4237-b320-3884fa1fa593"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="555" height="1" uuid="be3f2db1-f368-48d6-b8f6-ad67298e1aed"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,47 @@
+root { 
+    display: block;
+}
+.heading
+{
+    margin-top: 10px;
+    margin-left: 500px;
+    font-family: Copperplate Gothic light;
+}
+.whitediv1
+{
+    background-image: url(image/back3.png);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    
+  
+}
+.whitediv2
+{
+    background-color: whitesmoke;
+    height: 330px;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border-radius: 30px 100px;
+    border-style: ridge;
+    padding-top: 10px;
+}
+.textbox
+{
+    height: 30px;
+    width: 150px;
+    margin-left: 100px;
+    border: hidden;
+    border-bottom-style: groove;
+    border-radius: 7px;
+    margin-top: 15px;
+    padding-left: 50px;
+}
+.button
+{
+    height: 40px;
+    width: 150px;
+    margin-left: 120px;
+}
